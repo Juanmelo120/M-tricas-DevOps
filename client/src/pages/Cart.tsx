@@ -22,7 +22,7 @@ export default function Cart() {
     return (
       <MainStoreLayout>
         <section className="mx-auto max-w-6xl px-4 py-8">
-          <p className="text-sm text-slate-600">Cargando carrito...</p>
+          <p className="text-sm text-slate-600">Cargando carrito....</p>
         </section>
       </MainStoreLayout>
     );
