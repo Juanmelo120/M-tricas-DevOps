@@ -1,0 +1,34 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: cimg/node:20.11
+
+    steps:
+      - checkout
+
+      - run:
+          name: Instalar dependencias del Frontend
+          command: |
+            cd client
+            npm install
+
+      - run:
+          name: Compilar Frontend
+          command: |
+            cd client
+            npm run build
+
+      - run:
+          name: Instalar dependencias del Backend
+          command: |
+            cd server
+            npm install
+
+workflows:
+  version: 2
+
+  build-project:
+    jobs:
+      - build
